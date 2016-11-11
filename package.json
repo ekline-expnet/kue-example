@@ -1,0 +1,22 @@
+{
+  "name": "jobqueue-example",
+  "version": "1.0.0",
+  "description": "A job queue example",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "bootstrap": "^3.3.7",
+    "bull": "^1.1.1",
+    "express": "^4.14.0",
+    "install": "^0.8.2",
+    "jquery": "^3.1.1",
+    "kue": "^0.11.5",
+    "npm": "^3.10.9"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Edward Kline",
+  "license": "ISC"
+}
