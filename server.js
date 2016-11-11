@@ -11,15 +11,16 @@ var JobQueue = Kue.createQueue();
 //console.log(JobQueue);
 JobQueue.watchStuckJobs(6000);
 //start and monitor a job worker
-var worker;
+var workers = [];
 function startWorker() {
-  worker = null;
+  var worker = null;
   worker = ChildProcess.spawn(process.argv[0], ['worker.js']);
     worker.on('close', function(){
       console.error("worker closed; restarting");
       startWorker();
     });
 }
+startWorker();
 startWorker();
 
 var sampleJob = function sampleJob(data) {
